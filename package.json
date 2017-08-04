@@ -56,7 +56,8 @@
     "@storybook/addon-links": "^3.2.0",
     "@storybook/addons": "^3.2.0",
     "@storybook/addon-notes": "^3.2.0",
-    "@storybook/addon-knobs": "^3.2.0"
+    "@storybook/addon-knobs": "^3.2.0",
+    "@storybook/addon-options": "^3.2.3"
   },
   "engines": {
     "node": ">= 4.0.0",
