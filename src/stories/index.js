@@ -20,6 +20,11 @@ import {
 import MyButton from './Button.vue';
 import Welcome from './Welcome.vue';
 import App from '../App.vue';
+import Hello2 from '../components/Hello2.vue';
+
+storiesOf('Hello2', module).add('Hello2', () => ({
+  render: h => h(Hello2),
+}));
 
 storiesOf('Welcome', module).add('Welcome', () => ({
   render: h => h(Welcome),
@@ -127,9 +132,8 @@ storiesOf('Addon Actions', module)
   .add('Action and method', () => ({
     template: '<my-button :handle-click="log">Click me to log the action</my-button>',
     methods: {
-      log: e => {
+      log: (e) => {
         e.preventDefault();
-        console.log(e.target);
         action('log2')(e.target.toString());
       },
     },
@@ -141,7 +145,7 @@ storiesOf('Addon Notes', module)
     withNotes({ text: 'My notes on some bold text' })(() => ({
       template:
         '<p><strong>Etiam vulputate elit eu venenatis eleifend. Duis nec lectus augue. Morbi egestas diam sed vulputate mollis. Fusce egestas pretium vehicula. Integer sed neque diam. Donec consectetur velit vitae enim varius, ut placerat arcu imperdiet. Praesent sed faucibus arcu. Nullam sit amet nibh a enim eleifend rhoncus. Donec pretium elementum leo at fermentum. Nulla sollicitudin, mauris quis semper tempus, sem metus tristique diam, efficitur pulvinar mi urna id urna.</strong></p>',
-    }))
+    })),
   )
   .add(
     'Note with HTML',
@@ -155,7 +159,7 @@ storiesOf('Addon Notes', module)
     `,
     })(() => ({
       template: '<p>🤔😳😯😮<br/>😄😩😓😱<br/>🤓😑😶😊</p>',
-    }))
+    })),
   );
 
 storiesOf('Addon Knobs', module)
