@@ -21,6 +21,7 @@ import MyButton from './Button.vue';
 import Welcome from './Welcome.vue';
 import App from '../App.vue';
 import Hello2 from '../components/Hello2.vue';
+import SbButton from '../components/button';
 
 storiesOf('Hello2', module).add('Hello2', () => ({
   render: h => h(Hello2),
@@ -41,6 +42,17 @@ storiesOf('Button', module)
   }))
   .add('square', () => ({
     template: '<my-button :rounded="false">A Button with square edges</my-button>',
+  }));
+
+storiesOf('sbButton', module)
+  // Works if Vue.component is called in the config.js in .storybook
+  .add('rounded', () => ({
+    components: { SbButton },
+    template: '<sb-button :rounded="true">A Button with rounded edges</sb-button>',
+  }))
+  .add('square', () => ({
+    components: { SbButton },
+    template: '<sb-button :rounded="false">A Button with square edges</sb-button>',
   }));
 
 storiesOf('Method for rendering Vue', module)
