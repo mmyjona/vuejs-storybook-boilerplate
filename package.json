@@ -6,13 +6,13 @@
   "private": true,
   "scripts": {
     "start": "node build/dev-server.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build": "node build/build.js",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
     "lodash": "^4.17.4",
+    "resolve-url-loader": "^2.1.0",
     "vue": "^2.3.3",
     "vuex": "^2.3.1"
   },

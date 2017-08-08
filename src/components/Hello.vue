@@ -17,12 +17,24 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <i-button>Default</i-button>
+    <i-button type="primary">Primary</i-button>
+    <i-button type="ghost">Ghost</i-button>
+    <i-button type="dashed">Dashed</i-button>
+    <i-button type="text">Text</i-button>
+    <br><br>
+    <i-button type="info">信息按钮</i-button>
+    <i-button type="success">成功按钮</i-button>
+    <i-button type="warning">警告按钮</i-button>
   </div>
 </template>
 
 <script>
+import Button from '../../vendors/iview/src/components/button';
+
 export default {
   name: 'hello',
+  components:{'i-button':Button},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -32,7 +44,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang='less'>
+@import (reference) "../../vendors/iview/src/styles/index.less";
+@import "../../vendors/iview/src/styles/components/button.less";
+
 h1, h2 {
   font-weight: normal;
 }
