@@ -2,16 +2,19 @@
   <div id="app">
     <img src="./assets/logo.png">
     <hello></hello>
+    <hello3></hello3>
   </div>
 </template>
 
 <script>
 import Hello from './components/Hello.vue'
+import Hello3 from './components/Hello3.vue'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Hello,
+    Hello3
   }
 }
 </script>

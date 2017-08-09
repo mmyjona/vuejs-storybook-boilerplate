@@ -17,25 +17,25 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    <i-button>Default</i-button>
-    <i-button type="primary">Primary</i-button>
-    <i-button type="ghost">Ghost</i-button>
-    <i-button type="dashed">Dashed</i-button>
-    <i-button type="text">Text</i-button>
+    <e-button>Default</e-button>
+    <e-button type="primary">Primary</e-button>
+    <e-button type="ghost">Ghost</e-button>
+    <e-button type="dashed">Dashed</e-button>
+    <e-button type="text">Text</e-button>
     <br><br>
-    <i-button type="info">信息按钮</i-button>
-    <i-button type="success">成功按钮</i-button>
-    <i-button type="warning">警告按钮</i-button>
+    <e-button type="info">信息按钮</e-button>
+    <e-button type="success">成功按钮</e-button>
+    <e-button type="warning">警告按钮</e-button>
   </div>
 </template>
 
 <script>
-import iButton from '../../vendors/iview/src/components/button';
+import ElButton from '../../vendors/element/packages/button/';
 
 export default {
   name: 'hello',
   components:{
-    'i-button':iButton,
+    'e-button':ElButton,
   },
   data () {
     return {
@@ -48,7 +48,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang='less'>
 @import (reference) "../../vendors/iview/src/styles/index.less";
-@import "../../vendors/iview/src/styles/components/button.less";
+@import "../../vendors/element/packages/theme-default/lib/button.css";
 
 h1, h2 {
   font-weight: normal;
